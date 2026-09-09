@@ -17,7 +17,7 @@
           <p class="eyebrow">FSU Computer Science Resource Guide</p>
           <h1>Request HiPerGator Access</h1>
           <p class="lead">
-            Use this guide to request a HiPerGator account and, if approved, access to the FSU Computer Science Department allocation. HiPerGator is operated by UF Research Computing (UFRC), so the official request and support links use UF websites. Account creation and department-group access are separate steps; in Comments, name the FSU faculty sponsor you work with.
+            Use this guide to request a HiPerGator account and, if approved, access to the FSU Computer Science Department allocation. HiPerGator is operated by UF Research Computing (UFRC), so the official request and support links use UF websites. For a new account in the department group, select Dr. Weikuan Yu as Group Sponsor. In Comments, name the professor you actually work with.
           </p>
           <div class="action-row" aria-label="Primary actions">
             <a class="button primary" href="https://it.ufl.edu/rc/get-started/request-hipergator-account/" target="_blank" rel="noopener noreferrer">
@@ -25,7 +25,7 @@
             </a>
             <a class="button secondary" href="#ssh-key">Create an SSH key</a>
           </div>
-          <p class="verified">Reviewed September 8, 2026. UFRC documentation controls if procedures change.</p>
+          <p class="verified">Reviewed September 9, 2026. UFRC documentation controls if procedures change.</p>
         </div>
         <figure class="workflow-figure">
           <img
@@ -62,7 +62,7 @@
             <article class="step-card">
               <span class="step-number">1</span>
               <h3>Identify your professor</h3>
-              <p>Know the specific professor you work with and the project that requires access.</p>
+              <p>Know the specific professor you work with so you can name them in Comments.</p>
             </article>
             <article class="step-card">
               <span class="step-number">2</span>
@@ -76,8 +76,8 @@
             </article>
             <article class="step-card">
               <span class="step-number">4</span>
-              <h3>Get department approval</h3>
-              <p>Complete the account request, then request membership in the department group when required.</p>
+              <h3>Verify department access</h3>
+              <p>After approval, confirm access to the department group or request membership for an existing account.</p>
             </article>
           </div>
           <div class="notice">
@@ -97,15 +97,15 @@
             </article>
             <article class="choice-card">
               <h3>Student from another federated institution</h3>
-              <p>If your home institution appears in the <a href="https://docs.rc.ufl.edu/access/federated_liaisons/" target="_blank" rel="noopener noreferrer">UFRC federated liaison list</a>, select it and use that institution's credentials and email. Your FSU faculty sponsor still approves department access.</p>
+              <p>If your home institution appears in the <a href="https://docs.rc.ufl.edu/access/federated_liaisons/" target="_blank" rel="noopener noreferrer">UFRC federated liaison list</a>, select it and use that institution's credentials and email. For a new account in the department group, select Dr. Weikuan Yu as Group Sponsor and name the professor you work with in Comments.</p>
             </article>
             <article class="choice-card">
               <h3>External student without federation</h3>
-              <p>Ask your FSU faculty sponsor to confirm the official affiliate-account or UF GatorLink path before applying. Do not invent an FSU identity or use another person's credentials.</p>
+              <p>Ask the FSU professor you work with to confirm the official affiliate-account or UF GatorLink path before applying. Do not invent an FSU identity or use another person's credentials.</p>
             </article>
           </div>
           <div class="notice">
-            Your login identity and your resource sponsor are different things. An external student may use a home-institution identity while an FSU faculty sponsor authorizes access to the department allocation.
+            Your login identity, Group Sponsor, and the professor you work with are separate fields or roles. Use your own institution for identity, select Dr. Weikuan Yu as Group Sponsor for a new account in <code>fsu-compsci-dept</code>, and name the professor you work with in Comments.
           </div>
         </section>
 
@@ -115,7 +115,7 @@
             <h2>What the department allocation provides</h2>
           </div>
           <p>
-            This shared allocation supports approved users across multiple Computer Science groups. It does not automatically create an account or grant access; every user still needs a sponsor and department approval.
+            This shared allocation supports approved users across multiple Computer Science groups. It does not automatically create an account or grant access; new users need sponsor approval, and existing HiPerGator users need approval to join the department group.
           </p>
           <div class="stat-grid">
             <article class="stat-card">
@@ -141,7 +141,7 @@
             <li>The department group for this allocation is <code>fsu-compsci-dept</code>.</li>
             <li>The allocation does not create an account or approve an individual user automatically.</li>
             <li>Storage and compute are managed under the department's current policy; confirm the current group and path before moving data.</li>
-            <li>Use the department approval path for new users, even when you already have a personal HiPerGator account.</li>
+            <li>If you already have a HiPerGator account, request department-group membership instead of submitting another account request.</li>
           </ul>
         </section>
 
@@ -164,6 +164,10 @@
               <span>The full name of the professor you work with</span>
             </label>
             <label>
+              <input type="checkbox" data-check="sponsor">
+              <span>Dr. Weikuan Yu as the Group Sponsor for a new account in <code>fsu-compsci-dept</code></span>
+            </label>
+            <label>
               <input type="checkbox" data-check="project">
               <span>A short description of the project, course, or work that requires access</span>
             </label>
@@ -173,7 +177,7 @@
             </label>
           </form>
           <p>
-            Use the sponsor or group option shown by the current UFRC form and department instructions. Do not guess from a resource label. External students should confirm that their FSU faculty sponsor has approved the department resource path. If the department entry is missing, contact the department administrator or UFRC Support before submitting.
+            When requesting a new account in <code>fsu-compsci-dept</code>, select Dr. Weikuan Yu in the Group Sponsor field. This identifies the sponsor of the department group; it does not replace naming the professor you work with in Comments. If Dr. Yu or the department group is not available in the form, contact the department administrator or UFRC Support instead of selecting someone else.
           </p>
         </section>
 
@@ -213,7 +217,8 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
           <ol class="timeline">
             <li>Open <a href="https://it.ufl.edu/rc/get-started/request-hipergator-account/" target="_blank" rel="noopener noreferrer">Request HiPerGator Account</a>.</li>
             <li>Choose <strong>Federated Account Request</strong>. Select Florida State University if you are an FSU user; otherwise select your home institution if it is listed.</li>
-            <li>Enter your legal name, institutional email, actual organization, sponsor/group information, and Comments.</li>
+            <li>For a new account in <code>fsu-compsci-dept</code>, select <strong>Dr. Weikuan Yu</strong> in the Group Sponsor field.</li>
+            <li>Enter your legal name, institutional email, actual organization, and other requested information.</li>
             <li>In Comments, state the full name of the professor you work with. Do not write only "Computer Science Department."</li>
             <li>Paste the requested information or upload the public key as directed by the form.</li>
             <li>Finish the form in the same browser session. If it expires or resets, use UFRC Support instead of opening duplicate requests.</li>
@@ -226,7 +231,7 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
               <h3>Comments template</h3>
               <button class="copy-button" type="button" data-copy-target="comment-template" aria-label="Copy Comments template">Copy</button>
             </div>
-            <pre><code id="comment-template">I am a [FSU student/staff member OR student/researcher at HOME INSTITUTION] working with Professor [FULL NAME]. I am requesting HiPerGator access for [PROJECT, COURSE, OR PURPOSE] and would like to use the FSU Computer Science Department allocation. My institutional email is [EMAIL]. Please process my request under the department's current sponsor and group-approval procedure.</code></pre>
+            <pre><code id="comment-template">I am a [FSU student/staff member OR student/researcher at HOME INSTITUTION] working with Professor [FULL NAME]. I am requesting HiPerGator access to fsu-compsci-dept for [PROJECT, COURSE, OR PURPOSE]. My institutional email is [EMAIL].</code></pre>
           </article>
           <p>
             Replace every bracketed field with specific information. External students should keep their home institution and institutional email in the form. The professor named in Comments must be the person you actually work with, not a generic department label. Follow the current UFRC form if its sponsor or group choices change.
@@ -236,7 +241,7 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
         <section id="after" class="content-band">
           <div class="section-heading">
             <p class="eyebrow">After approval</p>
-            <h2>Verify the account before requesting membership</h2>
+            <h2>Verify your account and department access</h2>
           </div>
           <p>Complete any required onboarding or training, then test an interactive login and a small job.</p>
           <article class="code-card compact">
@@ -265,7 +270,7 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
         <section id="membership" class="content-band">
           <div class="section-heading">
             <p class="eyebrow">Department membership</p>
-            <h2>Request access to <span class="group-name">fsu-compsci-dept</span> when needed</h2>
+            <h2>Add an existing account to <span class="group-name">fsu-compsci-dept</span></h2>
           </div>
           <ol class="timeline">
             <li>Confirm that your HiPerGator account is active and record your exact username.</li>
@@ -286,8 +291,12 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
           </div>
           <div class="faq-list">
             <details>
+              <summary>Which Group Sponsor should I select?</summary>
+              <p>Select Dr. Weikuan Yu when requesting a new account in <code>fsu-compsci-dept</code>. The Group Sponsor is not necessarily the professor you work with; name that professor separately in Comments.</p>
+            </details>
+            <details>
               <summary>Which professor should I name?</summary>
-              <p>Name the specific professor whose project, course, or research work you are joining. Do not use only the department name. If you are working with more than one professor, list the primary contact first and mention the others in the same comment.</p>
+              <p>In Comments, name the specific professor whose project, course, or research work you are joining. This may be different from Dr. Weikuan Yu, who is selected as Group Sponsor. If you are working with more than one professor, list the primary contact first and mention the others in the same comment.</p>
             </details>
             <details>
               <summary>Do I need a new account to use the department allocation?</summary>
@@ -295,11 +304,11 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
             </details>
             <details>
               <summary>What if the department group is not visible?</summary>
-              <p>Do not select an unrelated sponsor. Contact the department administrator or UFRC Support and state that you are requesting access to the FSU Computer Science Department resource group.</p>
+              <p>Do not select an unrelated sponsor. Contact the department administrator or UFRC Support and state that you are requesting access to <code>fsu-compsci-dept</code> under Dr. Weikuan Yu's sponsorship.</p>
             </details>
             <details>
               <summary>Can an external student use this guide?</summary>
-              <p>Yes, if an FSU faculty sponsor confirms the work and the student follows the identity path for their home institution. Use a federated home-institution account when available; otherwise follow the official affiliate-account instructions. Department access is still subject to approval.</p>
+              <p>Yes, if the FSU professor they work with confirms the work and the student follows the identity path for their home institution. Use a federated home-institution account when available; otherwise follow the official affiliate-account instructions. Department access is still subject to approval.</p>
             </details>
           </div>
         </section>
