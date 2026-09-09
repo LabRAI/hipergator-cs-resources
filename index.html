@@ -41,6 +41,7 @@
     <div class="page-shell">
       <aside class="side-nav" aria-label="Page navigation">
         <a href="#overview">Quick path</a>
+        <a href="#identity">Choose your identity path</a>
         <a href="#department">Department allocation</a>
         <a href="#prepare">Prepare first</a>
         <a href="#ssh-key">SSH public key</a>
@@ -71,7 +72,7 @@
             <article class="step-card">
               <span class="step-number">3</span>
               <h3>Submit a federated request</h3>
-              <p>Select Florida State University and use your FSU credentials.</p>
+              <p>Submit the federated request with your own institution's credentials, or follow the approved affiliate path if federation is unavailable.</p>
             </article>
             <article class="step-card">
               <span class="step-number">4</span>
@@ -81,6 +82,30 @@
           </div>
           <div class="notice">
             Do not submit a second account request when you only need department-group membership. Account creation, sponsor approval, group membership, and resource allocation are different records.
+          </div>
+        </section>
+
+        <section id="identity" class="content-band">
+          <div class="section-heading">
+            <p class="eyebrow">Choose your identity path</p>
+            <h2>Use your own institution's identity</h2>
+          </div>
+          <div class="choice-grid">
+            <article class="choice-card recommended">
+              <h3>FSU student or staff member</h3>
+              <p>Select <strong>Federated Account Request</strong>, choose Florida State University, and use your FSU credentials and FSU email.</p>
+            </article>
+            <article class="choice-card">
+              <h3>Student from another federated institution</h3>
+              <p>If your home institution appears in the <a href="https://docs.rc.ufl.edu/access/federated_liaisons/" target="_blank" rel="noopener noreferrer">UFRC federated liaison list</a>, select it and use that institution's credentials and email. Your FSU faculty sponsor still approves department access.</p>
+            </article>
+            <article class="choice-card">
+              <h3>External student without federation</h3>
+              <p>Ask your FSU faculty sponsor to confirm the official affiliate-account or UF GatorLink path before applying. Do not invent an FSU identity or use another person's credentials.</p>
+            </article>
+          </div>
+          <div class="notice">
+            Your login identity and your resource sponsor are different things. An external student may use a home-institution identity while an FSU faculty sponsor authorizes access to the department allocation.
           </div>
         </section>
 
@@ -131,11 +156,11 @@
           <form class="checklist" aria-label="Pre-application checklist">
             <label>
               <input type="checkbox" data-check="email">
-              <span>Your FSU institutional email address</span>
+              <span>Your institutional email: FSU email for FSU users, or your home-institution email for external users</span>
             </label>
             <label>
               <input type="checkbox" data-check="organization">
-              <span><strong>Organization:</strong> Florida State University</span>
+              <span><strong>Organization:</strong> your actual institution, not automatically Florida State University</span>
             </label>
             <label>
               <input type="checkbox" data-check="professor">
@@ -151,7 +176,7 @@
             </label>
           </form>
           <p>
-            Use the sponsor or group option shown by the current UFRC form and department instructions. Do not guess from a resource label. If the department entry is missing, contact the department administrator or UFRC Support before submitting.
+            Use the sponsor or group option shown by the current UFRC form and department instructions. Do not guess from a resource label. External students should confirm that their FSU faculty sponsor has approved the department resource path. If the department entry is missing, contact the department administrator or UFRC Support before submitting.
           </p>
         </section>
 
@@ -166,7 +191,7 @@
                 <h3>Linux or macOS</h3>
                 <button class="copy-button" type="button" data-copy-target="unix-key" aria-label="Copy Linux or macOS command">Copy</button>
               </div>
-              <pre><code id="unix-key">ssh-keygen -t ed25519 -C "your_fsu_email@fsu.edu" -f ~/.ssh/id_ed25519_hipergator
+              <pre><code id="unix-key">ssh-keygen -t ed25519 -C "your_institutional_email" -f ~/.ssh/id_ed25519_hipergator
 cat ~/.ssh/id_ed25519_hipergator.pub</code></pre>
             </article>
             <article class="code-card">
@@ -174,7 +199,7 @@ cat ~/.ssh/id_ed25519_hipergator.pub</code></pre>
                 <h3>Windows PowerShell</h3>
                 <button class="copy-button" type="button" data-copy-target="windows-key" aria-label="Copy Windows PowerShell command">Copy</button>
               </div>
-              <pre><code id="windows-key">ssh-keygen -t ed25519 -C "your_fsu_email@fsu.edu" -f $env:USERPROFILE/.ssh/id_ed25519_hipergator
+              <pre><code id="windows-key">ssh-keygen -t ed25519 -C "your_institutional_email" -f $env:USERPROFILE/.ssh/id_ed25519_hipergator
 type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
             </article>
           </div>
@@ -190,8 +215,8 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
           </div>
           <ol class="timeline">
             <li>Open <a href="https://it.ufl.edu/rc/get-started/request-hipergator-account/" target="_blank" rel="noopener noreferrer">Request HiPerGator Account</a>.</li>
-            <li>Choose <strong>Federated Account Request</strong> and select <strong>Florida State University</strong>.</li>
-            <li>Enter your legal name, FSU email, organization, sponsor/group information, and Comments.</li>
+            <li>Choose <strong>Federated Account Request</strong>. Select Florida State University if you are an FSU user; otherwise select your home institution if it is listed.</li>
+            <li>Enter your legal name, institutional email, actual organization, sponsor/group information, and Comments.</li>
             <li>In Comments, state the full name of the professor you work with. Do not write only "Computer Science Department."</li>
             <li>Paste the requested information or upload the public key as directed by the form.</li>
             <li>Finish the form in the same browser session. If it expires or resets, use UFRC Support instead of opening duplicate requests.</li>
@@ -204,10 +229,10 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
               <h3>Required Comments template</h3>
               <button class="copy-button" type="button" data-copy-target="comment-template" aria-label="Copy Comments template">Copy</button>
             </div>
-            <pre><code id="comment-template">I am an FSU Computer Science researcher working with Professor [FULL NAME]. I am requesting HiPerGator access for [PROJECT, COURSE, OR PURPOSE] and would like to use the FSU Computer Science Department allocation. Please process my request under the department's current sponsor and group-approval procedure.</code></pre>
+            <pre><code id="comment-template">I am a [FSU student/staff member OR student/researcher at HOME INSTITUTION] working with Professor [FULL NAME]. I am requesting HiPerGator access for [PROJECT, COURSE, OR PURPOSE] and would like to use the FSU Computer Science Department allocation. My institutional email is [EMAIL]. Please process my request under the department's current sponsor and group-approval procedure.</code></pre>
           </article>
           <p>
-            Replace every bracketed field with specific information. The professor named in Comments must be the person you actually work with, not a generic department label. Follow the current UFRC form if its sponsor or group choices change.
+            Replace every bracketed field with specific information. External students should keep their home institution and institutional email in the form. The professor named in Comments must be the person you actually work with, not a generic department label. Follow the current UFRC form if its sponsor or group choices change.
           </p>
         </section>
 
@@ -227,7 +252,7 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
           <div class="info-grid">
             <article class="info-card">
               <h3>Username</h3>
-              <p>Use the HiPerGator username from your account email. It may differ from the local part of your FSU email address.</p>
+              <p>Use the HiPerGator username from your account email. It may differ from the local part of your institutional email address.</p>
             </article>
             <article class="info-card">
               <h3>Network access</h3>
@@ -248,7 +273,7 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
           <ol class="timeline">
             <li>Confirm that your HiPerGator account is active and record your exact username.</li>
             <li>Open a request at <a href="https://support.rc.ufl.edu/" target="_blank" rel="noopener noreferrer">UFRC Support</a> asking to add your username to <code>fsu-compsci-dept</code>.</li>
-            <li>Include your full name, FSU email, the professor you work with, and the purpose of the request.</li>
+            <li>Include your full name, institutional email, home institution if applicable, the professor you work with, and the purpose of the request.</li>
             <li>Department-authorized managers review the request and post approval through the support system when required.</li>
             <li>After confirmation, verify the group and Slurm account on HiPerGator before submitting production work.</li>
           </ol>
@@ -274,6 +299,10 @@ type $env:USERPROFILE/.ssh/id_ed25519_hipergator.pub</code></pre>
             <details>
               <summary>What if the department group is not visible?</summary>
               <p>Do not select an unrelated sponsor. Contact the department administrator or UFRC Support and state that you are requesting access to the FSU Computer Science Department resource group.</p>
+            </details>
+            <details>
+              <summary>Can an external student use this guide?</summary>
+              <p>Yes, if an FSU faculty sponsor confirms the work and the student follows the identity path for their home institution. Use a federated home-institution account when available; otherwise follow the official affiliate-account instructions. Department access is still subject to approval.</p>
             </details>
           </div>
         </section>
