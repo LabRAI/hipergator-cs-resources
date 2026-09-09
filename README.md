@@ -2,7 +2,7 @@
 
 Public English tutorial website for requesting HiPerGator access to Florida State University Computer Science Department resources.
 
-The page separates account creation, department-group membership, and the department-level resource purchase. The current UF Research Computing documentation controls if the workflow changes.
+The page separates account creation, department-group membership, and use of the department resource allocation. The current UF Research Computing documentation controls if the workflow changes.
 
 ## Local preview
 

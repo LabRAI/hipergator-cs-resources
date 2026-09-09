@@ -370,6 +370,14 @@ main {
   overflow-wrap: anywhere;
 }
 
+.group-name {
+  color: var(--fsu);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 1em;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 .code-header {
   display: flex;
   gap: 12px;
@@ -456,12 +464,6 @@ pre code {
 
 .stat-card p {
   color: var(--muted);
-}
-
-.stat-card.wide {
-  grid-column: span 4;
-  min-height: auto;
-  border-color: rgba(250, 70, 22, 0.36);
 }
 
 .plain-list {
@@ -605,7 +607,4 @@ details p {
     min-height: 0;
   }
 
-  .stat-card.wide {
-    grid-column: span 1;
-  }
 }
