@@ -16,5 +16,4 @@ Open \`index.html\` in a browser.
 - From Zero to HiPerGator: https://docs.rc.ufl.edu/quickstart/zero_hipergator/
 - Connecting with SSH: https://docs.rc.ufl.edu/interfaces/terminal/
 - Using SSH Keys: https://docs.rc.ufl.edu/access/ssh_keys/
-- HiPerGator Quotes and Purchases: https://docs.rc.ufl.edu/resources/quote/
 - UFRC Support: https://support.rc.ufl.edu/

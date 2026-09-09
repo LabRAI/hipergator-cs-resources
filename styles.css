@@ -466,6 +466,10 @@ pre code {
   color: var(--muted);
 }
 
+.supporting-note {
+  color: var(--muted);
+}
+
 .plain-list {
   display: grid;
   gap: 10px;
