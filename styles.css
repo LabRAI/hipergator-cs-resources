@@ -154,7 +154,14 @@ p {
 }
 
 .policy-notice strong {
+  display: block;
+  margin-bottom: 2px;
   color: var(--ink);
+}
+
+.policy-band .policy-notice {
+  max-width: 820px;
+  margin-top: 0;
 }
 
 .button:focus-visible,
