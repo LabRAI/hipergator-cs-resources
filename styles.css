@@ -141,6 +141,22 @@ p {
   color: var(--ink);
 }
 
+.policy-notice {
+  max-width: 680px;
+  margin-top: 20px;
+  padding: 12px 14px;
+  border: 1px solid rgba(250, 70, 22, 0.35);
+  border-left: 5px solid var(--orange);
+  border-radius: 8px;
+  background: #fff7f3;
+  color: #573123;
+  line-height: 1.5;
+}
+
+.policy-notice strong {
+  color: var(--ink);
+}
+
 .button:focus-visible,
 .copy-button:focus-visible,
 .side-nav a:focus-visible,
